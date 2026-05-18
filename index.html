@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maru Trainer · Personal Trainer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===========================
+       NAVBAR
+  =========================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#inicio" class="navbar__logo">
+        <!-- Logo imagen: reemplazar con el archivo real cuando esté disponible -->
+        <img src="assets/img/logo.png" alt="Maru Trainer" class="navbar__logo-img"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <!-- Fallback si no hay logo imagen -->
+        <span class="navbar__logo-fallback" style="display:none;">
+          <svg class="navbar__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="13,2 4,14 11,14 11,22 20,10 13,10" fill="#ff6cce" />
+          </svg>
+          <span>MARU TRAINER</span>
+        </span>
+      </a>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="navbar__menu" id="nav-menu">
+        <a href="#inicio"    class="navbar__link">Inicio</a>
+        <a href="#sobre"     class="navbar__link">Sobre mí</a>
+        <a href="#servicios" class="navbar__link">Servicios</a>
+        <a href="#planes"    class="navbar__link">Planes</a>
+        <a href="#contacto"  class="navbar__link">Contacto</a>
+        <a href="#contacto"  class="btn btn--primary navbar__cta">Empezá hoy</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ===========================
+       HERO — INICIO
+  =========================== -->
+  <section class="hero" id="inicio">
+    <!-- Video fondo: convertir los .MOV a .mp4 y ubicarlos en assets/videos/ -->
+    <video autoplay muted loop playsinline class="hero__video">
+      <source src="assets/videos/video1.mp4" type="video/mp4">
+      <!-- Fallback: si no carga el video, queda el fondo oscuro con la imagen -->
+    </video>
+    <!-- Imagen de fallback mientras carga el video -->
+    <div class="hero__img-wrap">
+      <img
+        src="assets/img/hero.jpg"
+        alt="Maru Trainer Personal Trainer"
+        class="hero__img"
+      />
+    </div>
+    <div class="hero__overlay"></div>
+
+    <span class="watermark watermark--right">FITNESS</span>
+
+    <div class="hero__content">
+      <p class="hero__sub reveal">personal trainer · mar del plata</p>
+      <h1 class="hero__name reveal delay-1">
+        <span class="text--magenta">MARU</span><br>
+        <span class="text--white">TRAINER</span>
+      </h1>
+      <p class="hero__tagline reveal delay-2">
+        Transformá tu cuerpo.<br>Superá tus límites.
+      </p>
+      <div class="hero__btns reveal delay-3">
+        <a href="#planes"   class="btn btn--primary btn--lg">Ver planes</a>
+        <a href="#contacto" class="btn btn--outline btn--lg">Contactarme</a>
+      </div>
+    </div>
+
+        <!-- LOGO GRANDE -->
+    <div class="hero__logo reveal delay-2">
+      <img src="assets/img/logo.png" alt="Logo Maru Trainer">
+    </div>
+
+    <!-- Indicador de scroll -->
+    <div class="hero__scroll-hint reveal delay-4">
+      <span>Desliza</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ===========================
+       SOBRE MARU — 2 columnas + Certificaciones
+  =========================== -->
+  <section class="about" id="sobre">
+    <span class="watermark watermark--right watermark--outline">FITNESS</span>
+
+    <!-- Columna texto -->
+    <div class="about__text reveal">
+      <p class="about__eyebrow">Conocé a tu entrenadora</p>
+      <h2 class="section-title">
+        <span class="text--magenta">MAS</span><br>
+        <span class="text--white">SOBRE MI</span>
+      </h2>
+      <p class="about__bio">
+        Soy Maru, Personal Trainer certificada con más de 2 años de experiencia
+        transformando cuerpos y mentes en Mar del Plata. Mi metodología combina
+        ciencia del movimiento, hábitos saludables y motivación real para que
+        alcances tus metas sin excusas.
+      </p>
+      <p class="about__bio">
+        Creo que el entrenamiento no es un castigo — es una inversión en tu
+        mejor versión. Cada cuerpo es único, cada plan también. Trabajamos
+        juntas desde donde estés, al ritmo que necesitás.
+      </p>
+      <a href="#planes" class="btn btn--primary">Ver planes →</a>
+    </div>
+
+    <!-- Columna imagen/video -->
+    <div class="about__media reveal delay-1">
+      <div class="about__media-inner">
+        <img
+          src="assets/img/about.jpg"
+          alt="Maru Trainer en el gym"
+          class="about__img"
+        />
+        <div class="about__media-accent"></div>
+        <!-- Badge flotante -->
+        <div class="about__badge">
+          <span class="about__badge-num">+2</span>
+          <span class="about__badge-txt">años de<br>experiencia</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificaciones: fila completa debajo -->
+    <div class="certs reveal delay-2">
+      <h3 class="certs__title">Mis Certificaciones</h3>
+      <div class="certs__grid">
+
+        <div class="cert-card">
+          <div class="cert-card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/></svg>
+          </div>
+          <p class="cert-card__name">Técnica en<br>Preparación Física</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          </div>
+          <p class="cert-card__name">Personal<br>Trainer</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.5-2.33 6.79-5 7.93-2.67-1.14-5-4.43-5-7.93V7.18L12 5z"/></svg>
+          </div>
+          <p class="cert-card__name">Entrenamiento<br>Estético</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17 2H7C5.9 2 5 2.9 5 4v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H7V4h10v16zM9 6h6v2H9zm0 4h6v2H9zm0 4h4v2H9z"/></svg>
+          </div>
+          <p class="cert-card__name">Alineación<br>Postural</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <p class="cert-card__name">Entrenamiento<br>Funcional</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===========================
+       BANNER FULL — TODO ACERCA DE
+  =========================== -->
+  <section class="about-banner">
+    <span class="watermark watermark--left  watermark--outline">FITNESS</span>
+    <span class="watermark watermark--right watermark--outline">TRAINING</span>
+
+    <div class="about-banner__overlay">
+      <h2 class="about-banner__title reveal">
+
+        <span class="lema-grande">
+          Nuestro lema
+        </span>
+
+        <span class="texto-frase">
+          “Nunca renuncies a algo con un gran potencial a largo plazo
+          solo porque no puedas soportar el estrés del momento.”
+        </span>
+
+      </h2>
+    </div>
+
+    <img
+      src="assets/img/banner.jpg"
+      alt="Entrenamiento con barra"
+      class="about-banner__img"
+      style="object-position: center 40%;"
+    />
+    <div class="about-banner__bar"></div>
+  </section>
+
+
+  <!-- ===========================
+       MISIÓN & VISIÓN
+  =========================== -->
+  <section class="mission" id="mision">
+    <div class="mission__img-col reveal">
+      <img
+        src="assets/img/mission.jpg"
+        alt="Levantamiento de pesas"
+        class="mission__img"
+      />
+      <div class="mission__img-accent"></div>
+    </div>
+
+    <div class="mission__text-col reveal delay-1">
+      <h2 class="section-title">
+        <span class="text--magenta">Misión de la</span><br>
+        <span class="text--white">Marca</span>
+      </h2>
+      <p class="mission__subtitle">de Maru Trainer</p>
+
+      <div class="mission__cards">
+        <div class="mission__card">
+          <h3 class="mission__card-title">VISIÓN</h3>
+          <p>Ser la referente de entrenamiento personalizado en Mar del Plata, inspirando a cada
+          persona a descubrir su mejor versión a través del movimiento, la constancia y la
+          disciplina positiva.</p>
+        </div>
+        <div class="mission__card">
+          <h3 class="mission__card-title">MISIÓN</h3>
+          <p>Diseñar programas de entrenamiento individualizados que combinen ciencia, motivación
+          y bienestar integral, acompañando a cada una de ustedes en su camino hacia una vida más
+          saludable y plena.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mission__coach-col reveal delay-2">
+      <img
+        src="assets/img/mission2.jpg"
+        alt="Maru Trainer"
+        class="mission__coach-img"
+      />
+      <span class="watermark watermark--bottom watermark--outline">HEALTHY</span>
+    </div>
+  </section>
+
+
+  <!-- ===========================
+       SERVICIOS
+  =========================== -->
+  <section class="services" id="servicios">
+    <div class="services__imgs">
+      <div class="services__img-top">
+        <img
+          src="assets/img/service1.jpg"
+          alt="Entrenamiento con barra"
+        />
+        <div class="services__img-bar"></div>
+      </div>
+    </div>
+
+    <div class="services__list">
+      <h2 class="section-title reveal">
+        <span class="text--magenta">Todos mis</span><br>
+        <span class="text--white">Servicios</span>
+      </h2>
+
+      <div class="service-item reveal delay-1">
+        <div class="service-item__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/></svg>
+        </div>
+        <div class="service-item__body">
+          <h3 class="service-item__title">PLANES DE ENTRENAMIENTO</h3>
+          <p>Rutinas 100% personalizadas según tus objetivos, nivel y disponibilidad. Fuerza, cardio,
+          definición o ganancia muscular — diseñadas para vos.</p>
+          <a class="btn btn--outline service-item__btn"
+             href="https://instagram.com/maru_traineroficial"
+             target="_blank" rel="noopener">Contactar</a>
+        </div>
+      </div>
+
+      <div class="service-item reveal delay-2">
+        <div class="service-item__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        </div>
+        <div class="service-item__body">
+          <h3 class="service-item__title">ASESORÍAS PERSONALIZADAS</h3>
+          <p>Sesiones 1 a 1 donde analizamos tu cuerpo, hábitos y metas para trazar el plan exacto
+          que necesitás. Presencial o virtual, en Mar del Plata o desde cualquier lugar.</p>
+          <a class="btn btn--outline service-item__btn"
+             href="https://instagram.com/maru_traineroficial"
+             target="_blank" rel="noopener">Contactar</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="services__diag"></div>
+  </section>
+
+
+  <!-- ===========================
+       PLANES — REDISEÑO COMPLETO
+  =========================== -->
+  <section class="plans" id="planes">
+    <span class="watermark watermark--right watermark--outline">FITNESS</span>
+
+    <div class="plans__header reveal">
+      <h2 class="section-title">
+        <span class="text--magenta">Elegí tu</span><br>
+        <span class="text--white">Plan</span>
+      </h2>
+      <p class="plans__header-text">
+        Planes diseñados para cada etapa de tu camino. Todos incluyen seguimiento
+        personalizado y ajuste mensual según tu progreso.
+      </p>
+    </div>
+
+    <!-- FILA 1: Principiante · Intermedio · Avanzado -->
+    <div class="plans__row plans__row--top">
+
+      <!-- Plan Principiante -->
+      <div class="plan-card reveal delay-1">
+        <div class="plan-card__img-wrap">
+          <img src="assets/img/plan-principiante.jpg" alt="Plan Principiante" style="object-position: center 22%;" />
+          <div class="plan-card__label">Principiante</div>
+        </div>
+        <div class="plan-card__body">
+          <div class="plan-card__price-wrap">
+            <div class="plan-card__price">$50.000</div>
+            <div class="plan-card__period">/ mes</div>
+          </div>
+          <h3 class="plan-card__name">Plan Principiante</h3>
+          <ul class="plan-card__features">
+            <li>Rutina de 3 días con movilidad articular incluida</li>
+            <li>Circuitos funcionales progresivos por día</li>
+            <li>Zona media trabajada en cada sesión</li>
+            <li>Soporte y seguimiento directo con Maru</li>
+          </ul>
+          <a href="https://api.whatsapp.com/send/?phone=542236975701&text=Hola%2C+te+contacto+porque+vi+en+la+pagina+Maru+Trainer+por+el+siguiente+plan%3A+Plan+Principiante.&type=phone_number&app_absent=0"
+             target="_blank" rel="noopener" class="btn btn--primary plan-card__cta">¡Lo quiero!</a>
+        </div>
+      </div>
+
+      <!-- Plan Intermedio -->
+      <div class="plan-card reveal delay-2">
+        <div class="plan-card__img-wrap">
+          <img src="assets/img/plan-intermedio.jpg" alt="Plan Intermedio" style="object-position: center 18%;" />
+          <div class="plan-card__label">Intermedio</div>
+        </div>
+        <div class="plan-card__body">
+          <div class="plan-card__price-wrap">
+            <div class="plan-card__price">Consultar</div>
+            <div class="plan-card__period">precio a medida</div>
+          </div>
+          <h3 class="plan-card__name">Plan Intermedio</h3>
+          <ul class="plan-card__features">
+            <li>Rutina de 3 días con progresión de carga semanal</li>
+            <li>Combinación de fuerza, hipertrofia y zona media</li>
+            <li>Correcciones de técnica y ajuste quincenal de rutina</li>
+            <li>Soporte directo con Maru vía WhatsApp</li>
+          </ul>
+          <a href="https://api.whatsapp.com/send/?phone=542236975701&text=Hola%2C+te+contacto+porque+vi+en+la+pagina+Maru+Trainer+por+el+siguiente+plan%3A+Plan+Intermedio.&type=phone_number&app_absent=0"
+             target="_blank" rel="noopener" class="btn btn--primary plan-card__cta">¡Lo quiero!</a>
+        </div>
+      </div>
+
+      <!-- Plan Avanzado -->
+      <div class="plan-card reveal delay-3">
+        <div class="plan-card__img-wrap">
+          <img src="assets/img/plan-avanzado.jpg" alt="Plan Avanzado" />
+          <div class="plan-card__label">Avanzado</div>
+        </div>
+        <div class="plan-card__body">
+          <div class="plan-card__price-wrap">
+            <div class="plan-card__price">$50.000</div>
+            <div class="plan-card__period">/ mes</div>
+          </div>
+          <h3 class="plan-card__name">Plan Avanzado</h3>
+          <ul class="plan-card__features">
+            <li>3 días: tren inferior, tren superior y full body</li>
+            <li>Sobrecarga progresiva entre series por bloque</li>
+            <li>Movilidad articular específica por zona cada día</li>
+            <li>Videos explicativos de cada ejercicio incluidos</li>
+          </ul>
+          <a href="https://api.whatsapp.com/send/?phone=542236975701&text=Hola%2C+te+contacto+porque+vi+en+la+pagina+Maru+Trainer+por+el+siguiente+plan%3A+Plan+Avanzado.&type=phone_number&app_absent=0"
+             target="_blank" rel="noopener" class="btn btn--primary plan-card__cta">¡Lo quiero!</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FILA 2: GAP (destacado) + Personalizado -->
+    <div class="plans__row plans__row--bottom">
+
+      <!-- Plan GAP — DESTACADO ⭐ -->
+      <div class="plan-card plan-card--featured plan-card--custom reveal delay-1">
+        <span class="plan-card__badge">⭐ MÁS POPULAR</span>
+        <div class="plan-card__img-wrap">
+          <img src="assets/img/plan-gap.jpg" alt="Plan GAP" style="object-position: center 45%;" />
+          <div class="plan-card__label">GAP</div>
+        </div>
+        <div class="plan-card__body">
+          <div class="plan-card__price-wrap">
+            <div class="plan-card__price plan-card__price--big">$30.000</div>
+            <div class="plan-card__period">/ mes</div>
+          </div>
+          <h3 class="plan-card__name">Plan GAP</h3>
+          <p class="plan-card__tagline">Glúteos · Abdomen · Piernas</p>
+          <ul class="plan-card__features">
+            <li>3 bloques por sesión: sentadillas, glúteos y zona media</li>
+            <li>Técnica de isometría y tempo controlado</li>
+            <li>Rutina de 3 días focalizada en glúteos, abdomen y piernas</li>
+            <li>Descansos estructurados entre bloques</li>
+          </ul>
+          <a href="https://api.whatsapp.com/send/?phone=542236975701&text=Hola%2C+te+contacto+porque+vi+en+la+pagina+Maru+Trainer+por+el+siguiente+plan%3A+Plan+GAP.&type=phone_number&app_absent=0"
+             target="_blank" rel="noopener" class="btn btn--primary plan-card__cta">¡Lo quiero!</a>
+        </div>
+      </div>
+
+      <!-- Plan Personalizado -->
+      <div class="plan-card plan-card--custom reveal delay-2">
+        <span class="plan-card__badge plan-card__badge--custom">✦ EXCLUSIVO</span>
+        <div class="plan-card__img-wrap">
+          <img src="assets/img/plan-personalizado.jpg" alt="Plan Personalizado" style="object-position: center 20%;" />
+          <div class="plan-card__label">Personalizado</div>
+        </div>
+        <div class="plan-card__body">
+          <div class="plan-card__price-wrap">
+            <div class="plan-card__price plan-card__price--consult">Precio a medida</div>
+            <div class="plan-card__period"></div>
+          </div>
+          <h3 class="plan-card__name">Plan Personalizado</h3>
+          <p class="plan-card__tagline">100% adaptado a vos</p>
+          <ul class="plan-card__features">
+            <li>Evaluación inicial completa</li>
+            <li>Plan de entrenamiento exclusivo</li>
+            <li>Seguimiento semanal directo</li>
+            <li>Acceso prioritario a Maru</li>
+          </ul>
+          <a href="https://api.whatsapp.com/send/?phone=542236975701&text=Hola%2C+te+contacto+porque+vi+en+la+pagina+Maru+Trainer+por+el+siguiente+plan%3A+Plan+Personalizado+a+Medida.&type=phone_number&app_absent=0"
+             target="_blank" rel="noopener" class="btn btn--primary plan-card__cta">Consultá</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===========================
+       CONTACTO
+  =========================== -->
+  <section class="contact" id="contacto">
+    <span class="watermark watermark--center watermark--outline contact__wm1">SOUNDNESS</span>
+    <span class="watermark watermark--center watermark--outline contact__wm2">WELLNESS</span>
+
+    <div class="contact__left reveal">
+      <h2 class="section-title">
+        <span class="text--magenta">Contactate</span><br>
+        <span class="text--white">Conmigo</span>
+      </h2>
+      <div class="contact__divider"></div>
+
+      <div class="contact__grid">
+        <div class="contact__item">
+          <span class="contact__label">Email</span>
+          <a href="mailto:marutrainer@gmail.com" class="contact__value">marutrainer@gmail.com</a>
+        </div>
+        <div class="contact__item">
+          <span class="contact__label">Instagram</span>
+          <a href="https://instagram.com/maru_traineroficial" target="_blank" rel="noopener" class="contact__value">@maru_traineroficial</a>
+        </div>
+        <div class="contact__item">
+          <span class="contact__label">Ubicación</span>
+          <span class="contact__value">Mar del Plata, Buenos Aires</span>
+        </div>
+      </div>
+
+      <!-- WhatsApp CTA directo -->
+      <a href="https://api.whatsapp.com/send/?phone=542236975701&text=Hola+Maru+Trainer%2C+quiero+consultar+por+tus+planes.&type=phone_number&app_absent=0"
+         target="_blank" rel="noopener" class="btn btn--primary contact__wa-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:8px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Escribime por WhatsApp
+      </a>
+    </div>
+
+    <div class="contact__phone reveal delay-1">
+      <div class="contact__phone-frame">
+        <img
+          src="assets/img/contact.jpg"
+          alt="Maru Trainer"
+        />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===========================
+       FOOTER / GRACIAS
+  =========================== -->
+  <footer class="footer">
+    <div class="footer__center reveal">
+      <img
+        src="assets/img/footer.jpg"
+        alt="Maru Trainer"
+        class="footer__img"
+      />
+    </div>
+
+    <div class="footer__right reveal delay-1">
+      <div class="footer__line"></div>
+      <h2 class="footer__thanks">
+        <span class="text--magenta">Muchas</span><br>
+        <span class="text--white">Gracias</span>
+      </h2>
+      <div class="footer__line"></div>
+      <div class="footer__socials">
+        <a href="https://instagram.com/maru_traineroficial" target="_blank" rel="noopener" class="footer__social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Instagram
+        </a>
+      </div>
+      <p class="footer__copy">© 2026 Maru Trainer · Personal Trainer · Mar del Plata</p>
+    </div>
+  </footer>
+
+
+  <!-- ===========================
+       BOTONES FLOTANTES
+  =========================== -->
+  <button class="fab fab--top" id="back-to-top" aria-label="Volver arriba" title="Volver arriba">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+    </svg>
+  </button>
+
+  <a href="https://instagram.com/maru_traineroficial" target="_blank" rel="noopener"
+     class="fab fab--instagram" aria-label="Instagram" title="Seguime en Instagram">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
